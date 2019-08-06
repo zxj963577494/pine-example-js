@@ -71,8 +71,6 @@
     }
   },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "@hot-loader/react-dom": "^16.8.6",
     "@rematch/core": "^1.1.0",
     "@rematch/loading": "^1.1.3",
