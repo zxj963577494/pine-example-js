@@ -1,10 +1,8 @@
 # react-boilerplate
 
-支持 `TypeScript` 的 React 脚手架，fork 或 clone 本仓库，即可搭建完成一个 React 的基础框架
-
 ## :star: 特性
 
-- 支持 ES6+ 或 TypeScript 编写源码，编译生成生产代码
+- 支持 ES6+ 源码，编译生成生产代码
 - 集成代码风格校验 (eslint)
 - 集成单元测试环境（jest+enzyme）
 - 集成测试覆盖率（istanbul）
