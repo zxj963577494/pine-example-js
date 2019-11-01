@@ -21,6 +21,8 @@ package-lock.json
 *bak
 .vscode
 
+.eslintcache
+
 # visual studio code
 .history
 *.log
