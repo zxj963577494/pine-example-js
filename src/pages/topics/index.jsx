@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { push } from 'connected-react-router';
 
 import { Layout, List, Menu } from 'antd';
+import { push } from 'connected-react-router';
 
 const { Header, Content, Footer } = Layout;
 
@@ -75,16 +75,16 @@ class TopicPage extends PureComponent {
   }
 }
 
-const mapState = (state) => ({
+const mapState = state => ({
   topic: state.topic,
-  loading: state.loading.effects.topic.fetchAsync
+  loading: state.loading.effects.topic.fetchAsync,
 });
 
-const mapDispatch = (dispatch) => ({
+const mapDispatch = dispatch => ({
   fetch: params => dispatch.topic.fetchAsync(params),
   add: params => dispatch.topic.addAsync(params),
   update: params => dispatch.topic.updateAsync(params),
-  delete: (id) => dispatch.topic.deleteAsync(id),
+  delete: id => dispatch.topic.deleteAsync(id),
   go: () => dispatch(push('/comments')),
 });
 

@@ -8,7 +8,7 @@ import CreateForm from '@/pages/comments/CreateForm';
 
 const { Header, Content, Footer } = Layout;
 
-const CommentPage = (props) => {
+const CommentPage = props => {
   const [modalVisible, setModalVisible] = useState(false);
   const [current, setCurrent] = useState({
     postId: 0,
@@ -44,23 +44,23 @@ const CommentPage = (props) => {
     go();
   };
 
-  const handleAdd = (args) => {
+  const handleAdd = args => {
     console.log(args);
     setModalVisible(false);
     props.fetch({ id });
   };
 
-  const handleEdit = (args) => {
+  const handleEdit = args => {
     console.log(args);
     setModalVisible(false);
     props.fetch({ id });
   };
 
-  const handleModalVisible = (args) => {
+  const handleModalVisible = args => {
     setModalVisible(args);
   };
 
-  const handleSetCurrent = (args) => {
+  const handleSetCurrent = args => {
     setCurrent(args);
     setModalVisible(true);
   };
@@ -131,7 +131,7 @@ const mapState = (state, ownProps) => ({
   match: ownProps.match,
 });
 
-const mapDispatch = (dispatch) => ({
+const mapDispatch = dispatch => ({
   fetch: params => dispatch.comment.fetchAsync(params),
   go: () => dispatch(push('/')),
 });

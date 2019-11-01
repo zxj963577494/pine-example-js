@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { LocaleProvider } from 'antd';
-import { ConnectedRouter } from 'connected-react-router';
 
+import { ConfigProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
+import { ConnectedRouter } from 'connected-react-router';
 
 import { history, store } from '@/utils/store';
 
-import App from './App'; // eslint-disable-line
+import App from './App';
 
 const Root = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <LocaleProvider locale={zhCN}>
+      <ConfigProvider locale={zhCN}>
         <App />
-      </LocaleProvider>
+      </ConfigProvider>
     </ConnectedRouter>
   </Provider>
 );

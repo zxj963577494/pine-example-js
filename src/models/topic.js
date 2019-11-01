@@ -20,8 +20,7 @@ export const topic = createModel({
         ...state,
         data: {
           ...state.data,
-          ...payload.data,
-          list: payload.data.list.map(data => ({
+          list: payload.map(data => ({
             ...data,
             key: data.id,
           })),
